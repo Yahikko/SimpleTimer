@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Описываем вид меню, отображаемого в MainActivity-->
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <item
-        android:id="@+id/action_settings"
-        android:icon="@drawable/baseline_settings_24"
-        android:orderInCategory="100"
-        android:title="Settings"
-        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/action_about"
         android:icon="@drawable/baseline_question_answer_24"
         android:orderInCategory="110"
         android:title="About"
-        app:showAsAction="never" />
+        app:showAsAction="collapseActionView" /> <!--Вид отображения в меню-->
+
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/baseline_settings_24"
+        android:orderInCategory="100"
+        android:title="Settings"
+        app:showAsAction="collapseActionView" />
 </menu>

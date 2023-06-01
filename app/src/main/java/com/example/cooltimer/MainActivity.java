@@ -2,8 +2,10 @@ package com.example.cooltimer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.PreferenceManager;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -67,9 +69,13 @@ public class MainActivity extends AppCompatActivity {
 
                 @Override
                 public void onFinish() {
-                    mediaPlayer = MediaPlayer.create(getApplicationContext(),
-                            R.raw.bell_sound);
-                    mediaPlayer.start();
+                    SharedPreferences sharedPreferences =
+                            PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                    if (sharedPreferences.getBoolean("enable_sound", true)) {
+                        mediaPlayer = MediaPlayer.create(getApplicationContext(),
+                                R.raw.bell_sound);
+                        mediaPlayer.start();
+                    }
                     timer.cancel();
                     timeTextView.setText("00:30");
                     seekBar.setProgress(30);
@@ -105,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
         timeTextView.setText(minutesString + ":" + secondsString);
     }
 
+    //Создаем меню
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();

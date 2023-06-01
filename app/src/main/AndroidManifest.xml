@@ -14,13 +14,14 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:launchMode="singleTop">
+            android:launchMode="singleTop"> <!--Настраиваем способ запуска новых активити -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--Здесь описываются дополнительные активити-->
         <activity
             android:name=".AboutActivity"
             android:exported="false"
@@ -38,6 +39,7 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
+            <!-- -->
         </activity>
     </application>
 

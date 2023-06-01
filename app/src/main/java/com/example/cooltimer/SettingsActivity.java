@@ -21,6 +21,7 @@ public class SettingsActivity extends AppCompatActivity {
         }
     }
 
+    //Метод для возвращения в MainActivity по кнопке возврата
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
