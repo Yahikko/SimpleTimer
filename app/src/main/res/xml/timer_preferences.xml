@@ -1,11 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--Настраиваем поведение настроек.
+<?xml version="1.0" encoding="utf-8"?><!--Настраиваем поведение настроек.
     Здесь записаны ключ, надпись при включенной и выключенной кнопке-->
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <CheckBoxPreference
         android:defaultValue="true"
         android:key="enable_sound"
         android:summaryOff="Sound Disabled"
         android:summaryOn="Sound Enabled"
         android:title="Enable Sound" />
+
+    <ListPreference
+        android:defaultValue="bell"
+        android:entries="@array/pref_timer_melody_labels"
+        android:entryValues="@array/pref_timer_melody_values"
+        android:key="timer_melody"
+        android:title="Timer Melody"
+        app:useSimpleSummaryProvider="true" />
+
+    <EditTextPreference
+        android:defaultValue="30"
+        android:key="default_interval"
+        android:title="Default Interval"
+        app:useSimpleSummaryProvider="true" />
 </PreferenceScreen>

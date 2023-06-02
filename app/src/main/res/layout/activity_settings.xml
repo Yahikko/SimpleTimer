@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--В качестве используемой разметки выбираем fragment, который
-    был описан в xml.timer_preferences и выбран в SettingsFragment-->
+    был описан в xml/timer_preferences.xml и выбран в SettingsFragment-->
 <fragment xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/activity_settings"
     android:name="com.example.cooltimer.SettingsFragment"
